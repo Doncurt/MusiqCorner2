@@ -15,7 +15,7 @@ module.exports = (app) => {
   //votes up and down
 
 
- 
+
 app.put('posts/:id/vote-up', function (req, res) {
   Post.findById(req.params.id).exec(function (err, post) {
     post.upVotes.push(req.user._id)
