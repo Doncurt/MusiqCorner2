@@ -17,9 +17,9 @@ describe('posts-index', ()=> {
       });
   });
 });
-it('should not be able to login if they have not registered',(done)=> {
+it('should not log in if they have not signed up',(done)=> {
    agent
-     .post('/login', { email: "wrong@wrong.com", password: "nope" })
+     .post('/login', { email: "test@test.com", password: "testpassword" })
      .end( (err, res)=>{
        res.status.should.be.equal(401);
        done();
