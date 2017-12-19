@@ -1,9 +1,10 @@
 {
-  "name": "putit",
+  "name": "Music Corner",
   "version": "1.0.0",
-  "description": "Reddit-like site",
+  "description": "Music review site",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "mocha --timeout 10000"
   },
   "author": "",
