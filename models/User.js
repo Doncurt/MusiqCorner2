@@ -40,5 +40,11 @@ UserSchema.methods.comparePassword = (password, done)=> {
     done(err, isMatch);
   });
 };
-
+/*const autoPopulatePosts = function(next) {
+  this.populate('username');
+  next();
+};
+UserSchema.
+  pre('find', autoPopulatePosts).
+  pre('findOne', autoPopulatePosts); */
 module.exports = mongoose.model('User', UserSchema);

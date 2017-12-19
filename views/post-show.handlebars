@@ -16,6 +16,7 @@
     <p>Comments:</p>
     {{#each post.comments}}
       <li class="list-group-item">
+        <p>Submitted by {{this.author.username}}<p>
         <a href="/comments/{{this._id}}/new">Comment</a>
         <p>{{this.content}}</p>
         {{#if this.comments}}

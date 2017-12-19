@@ -38,7 +38,7 @@ app.put('posts/:id/vote-down', function (req, res) {
   // Index route - show all posts
   app.get('/', (req, res) => {
   var currentUser = req.user;
-
+  
   Post.find({}).then((posts) => {
     res.render('posts-index', { posts, currentUser })
   }).catch((err) => {
@@ -101,12 +101,12 @@ app.put('posts/:id/vote-down', function (req, res) {
  });
 
 ///route to display all the post that follow a particular sub reddit
- app.get('/n/:subreddit',(req, res) => {
+ app.get('/n/:category',(req, res) => {
    //console.log(req.params.subreddit)
 
-   Post.find({subreddit:req.params.subreddit}).then((post) => {
+   Post.find({category:req.params.category}).then((post) => {
      var currentUser = req.user;
-       res.render('subreddit', {post, currentUser: currentUser});
+       res.render('category', {post, currentUser: currentUser});
      }).catch((err) => {
          console.log("no page to be found");
      })
